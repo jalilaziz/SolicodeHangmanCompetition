@@ -28,7 +28,6 @@ fetch('hangman-game.json')
         }
 
         //2
-        
 
 //3
 

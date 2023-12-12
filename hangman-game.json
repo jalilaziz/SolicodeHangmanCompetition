@@ -6,7 +6,7 @@
         },
         {
             "question": "Which player holds the record for the most goals scored in a single calendar year?",
-            "answer": "Messi"
+            "answer": "Lionel Messi"
         },
         {
             "question": "Which country won the UEFA Euro 2020 football tournament?",
@@ -18,7 +18,7 @@
         },
         {
             "question": "Who is the all-time top scorer in the UEFA Champions League?",
-            "answer": "Ronaldo"
+            "answer": "Cristiano Ronaldo"
         },
         {
             "question": "Which national team is known as the 'Super Eagles'?",
@@ -28,15 +28,15 @@
     "basketball": [
         {
             "question": "Which NBA team has won the most championships?",
-            "answer": "Boston"
+            "answer": "Boston Celtics"
         },
         {
             "question": "Who holds the record for the most points scored in a single NBA game?",
-            "answer": "Wilt"
+            "answer": "Wilt Chamberlain"
         },
         {
             "question": "In basketball, what is the term for a field goal made while being fouled, with a free throw awarded?",
-            "answer": "And One"
+            "answer": "And-One"
         },
         {
             "question": "Which player has won the most NBA MVP awards as of 2022?",
@@ -44,11 +44,11 @@
         },
         {
             "question": "Who is the all-time leading scorer in NCAA Division I men's basketball?",
-            "answer": "Pete"
+            "answer": "Pete Maravich"
         },
         {
             "question": "Who holds the record for the most points scored in a single NBA game?",
-            "answer": "Wilt"
+            "answer": "Wilt Chamberlain"
         }
     ],
     "fitnes": [
@@ -58,7 +58,7 @@
         },
         {
             "question": "What is the recommended daily water intake for an average adult?",
-            "answer": "two"
+            "answer": "2 liters"
         },
         {
             "question": "Which type of exercise is known for improving flexibility and balance?",
@@ -66,7 +66,11 @@
         },
         {
             "question": "What is the purpose of a 'plank' exercise in a workout routine?",
-            "answer": "Core"
+            "answer": "Core Strengthening"
+        },
+        {
+            "question": "In weightlifting, what does 'RM' stand for?",
+            "answer": "Repetition Maximum"
         },
         {
             "question": "Which cardiovascular exercise is often recommended for improving heart health?",
