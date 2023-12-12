@@ -6,7 +6,6 @@ fetch('hangman-game.json')
         // Check if the current page is Hangman-Game.html
         if (window.location.pathname.includes("Hangman-Game.html")) {
 
-<<<<<<< HEAD
             // Get the 'id' parameter from the URL
             const params = new URLSearchParams(window.location.search);
             const id = params.get('id');
@@ -26,33 +25,17 @@ fetch('hangman-game.json')
 
             // Split the answer string into an array of characters using ', ' as the delimiter
             let answerArray = answer.split(', ');
-=======
-            let i = Math.floor(Math.random() * 7);
-            let para = new URLSearchParams(window.location.search);
-            let id = para.get("id");
             
 
-
-
->>>>>>> 1bc1e00b6c1d51191fffd21e9ffeec6bd7d18903
         }
 
         //2
+        
 
-
-<<<<<<< HEAD
 //3
 
 
 //4
-=======
-
-        //3
-
-
-
-        //4
->>>>>>> 1bc1e00b6c1d51191fffd21e9ffeec6bd7d18903
 
 
     })
