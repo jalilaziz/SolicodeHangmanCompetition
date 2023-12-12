@@ -5,19 +5,23 @@ fetch('hangman-game.json')
         if (window.location.pathname.includes("Hangman-Game.html")) {
 
             let i = Math.floor(Math.random() * 7);
+            let para = new URLSearchParams(window.location.search);
+            let id = para.get("id");
             
+
+
 
         }
 
-//2
+        //2
 
 
 
-//3
+        //3
 
 
 
-//4
+        //4
 
     })
     .catch((error) => {
