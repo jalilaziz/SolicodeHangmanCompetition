@@ -1,15 +1,25 @@
-// 1
+//1
+fetch('hangman-game.json')
+    .then((response) => response.json())
+    .then(async (json) => {
+        if (window.location.pathname.includes("Hangman-Game.html")) {
+
+            let i = Math.floor(Math.random() * 7);
+            
+
+        }
+
+//2
 
 
 
-// 1
+//3
 
 
 
-// 1
+//4
 
-
-
-// 1
-
-
+    })
+    .catch((error) => {
+        console.error('Error fetching data:', error);
+    });
