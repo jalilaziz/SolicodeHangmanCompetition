@@ -3,8 +3,6 @@ fetch('hangman-game.json')
     .then((response) => response.json()) // Parse the response as JSON
     .then(async (json) => {
 
-     
-
             // Extract 'id' parameter from the URL query string using URLSearchParams
             const params = new URLSearchParams(window.location.search);
             const id = params.get('id');
@@ -20,7 +18,7 @@ fetch('hangman-game.json')
             let question = document.getElementById("question");
             question.innerHTML = questionData;
 
-            let answer = document.getElementById("answer");
+            let answer = document.querySelector(".answers");
 
             // Create div elements for each character in the answerData
             for (let j = 0; j < answerData.length; j++) {
@@ -35,12 +33,13 @@ fetch('hangman-game.json')
 
             //for validing if u lose or won 
             let x = 0;
-            let keyboardDiv = document.getElementById("keyboardDiv")
+            let keyboardDiv = document.getElementById("button")
 
             // Create keyboard buttons dynamically
             for (let k = 0; k < alphabet.length; k++) {
                 let keyboard = document.createElement("button");
                 keyboardDiv.appendChild(keyboard)
+                keyboard.classList="letter"
                 keyboard.id = alphabet[k];
                 keyboard.innerHTML = alphabet[k];
 
