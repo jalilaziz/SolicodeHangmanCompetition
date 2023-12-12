@@ -1,0 +1,95 @@
+{
+    "football": [
+        {
+            "question": "Who won the FIFA World Cup in 2018?",
+            "answer": "France"
+        },
+        {
+            "question": "Which player holds the record for the most goals scored in a single calendar year?",
+            "answer": "Lionel Messi (91 goals in 2012)"
+        },
+        {
+            "question": "In what year did the first FIFA Women's World Cup take place?",
+            "answer": "1991"
+        },
+        {
+            "question": "Which country has won the most Copa America titles as of 2022?",
+            "answer": "Uruguay"
+        },
+        {
+            "question": "Who is the all-time top scorer in the UEFA Champions League?",
+            "answer": "Cristiano Ronaldo"
+        },
+        {
+            "question": "Which national team is known as the 'Super Eagles'?",
+            "answer": "Nigeria"
+        },
+        {
+            "question": "What is the name of the trophy awarded to the English Premier League champions?",
+            "answer": "The Premier League Trophy (officially known as the Barclay's Premier League Trophy)"
+        }
+    ],
+
+
+    "basketball": [
+        {
+            "question": "Which NBA team holds the record for the most championships?",
+            "answer": "Boston Celtics"
+        },
+        {
+            "question": "Who is the all-time leading scorer in NBA history?",
+            "answer": "Kareem Abdul-Jabbar"
+        },
+        {
+            "question": "In what year did Michael Jordan retire from basketball for the first time?",
+            "answer": "1993"
+        },
+        {
+            "question": "Which player has the most triple-doubles in NBA history?",
+            "answer": "Russell Westbrook"
+        },
+        {
+            "question": "What is the regulation height of an NBA basketball hoop?",
+            "answer": "10 feet"
+        },
+        {
+            "question": "Which college did LeBron James briefly attend before entering the NBA?",
+            "answer": "St. Vincent-St. Mary High School (did not attend college)"
+        },
+        {
+            "question": "Who holds the record for the most points scored in a single NBA game?",
+            "answer": "Wilt Chamberlain (100 points)"
+        }
+    ],
+    
+    "fitnes": [
+        {
+          "question": "What does the acronym 'HIIT' stand for in the context of fitness?",
+          "answer": "High-Intensity Interval Training"
+        },
+        {
+          "question": "Which exercise primarily targets the muscles of the chest?",
+          "answer": "Bench Press"
+        },
+        {
+          "question": "What is the recommended daily water intake for an average adult?",
+          "answer": "Around 8 cups (64 ounces) or 2 liters"
+        },
+        {
+          "question": "Which type of exercise is known for improving flexibility and balance?",
+          "answer": "Yoga"
+        },
+        {
+          "question": "What is the purpose of a 'plank' exercise in a workout routine?",
+          "answer": "Core Strengthening"
+        },
+        {
+          "question": "In weightlifting, what does 'RM' stand for?",
+          "answer": "'Repetition Maximum' (e.g., 1RM is the maximum weight one can lift for a single repetition)"
+        },
+        {
+          "question": "Which cardiovascular exercise is often recommended for improving heart health?",
+          "answer": "Running or Jogging"
+        }
+      ]
+}
