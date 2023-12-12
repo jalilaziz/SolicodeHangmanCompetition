@@ -25,8 +25,6 @@ fetch('hangman-game.json')
 
             // Split the answer string into an array of characters using ', ' as the delimiter
             let answerArray = answer.split(', ');
-            
-
         }
 
         //2
