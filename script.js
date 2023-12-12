@@ -30,6 +30,20 @@ fetch('hangman-game.json')
             //     answer.appendChild(div)
             // }
 
+            // Access the data for the selected category and question
+            let category_data = json[id][i];
+
+            // Display the question on the HTML page
+            let question = document.getElementById("question");
+            question.innerHTML = category_data.question;
+
+            // Get the answer for the selected question
+            let answer = category_data.answer;
+
+            // Split the answer string into an array of characters using ', ' as the delimiter
+            let answerArray = answer.split(', ');
+            
+
         }
 
         //2
