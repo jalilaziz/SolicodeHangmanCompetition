@@ -27,8 +27,9 @@ fetch('hangman-game.json')
             let answerArray = answer.split(', ');
         }
 
-        //2
+//2
 
+        
 //3
 
 
