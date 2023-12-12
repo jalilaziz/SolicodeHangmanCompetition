@@ -10,25 +10,51 @@
     <title>Hangman Game</title>
 </head>
 <body>
-<!-- 1 -->
-    <div>
-        <img src="images/son.svg" alt="son" class="son">
+    <audio id="defaultSong" autoplay>
+        <source src="audio/audiobk.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+ <section>
+    <div class="start">
+        <div class="son" id="sond">
+            <img src="images/son.svg" alt="">
+        </div>
+        <div class="play" style="display: none;">
+            <h1>LetterQuest</h1>
+            <img src="images/play.svg" alt="">
+        </div>
+        <div class="categories">
+            <div class="categorie">
+                <h1>Choose a <br>category !</h1>
+                <button>Football</button>
+                <button>Tennis</button>
+                <button>Football</button>
+            </div>
+        </div>
     </div>
-    <div class="play">
-        <h1>LETTER QUEST</h1>
-        <img src="images/play.svg" alt="play" >
+        <div class="settings">
+            <img src="images/settings.svg" alt="">
+        </div>
     </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('defaultSong');
+        var soundIcon = document.getElementById('sond');
+        var isMuted = false;
 
-
-<!-- 2 -->
-
-
-<!-- 3 -->
-
-
-<!-- 4 -->
-
-<script src="script.js"></script>
+        soundIcon.addEventListener('click', function() {
+            if (isMuted) {
+                audio.play();
+                soundIcon.innerHTML = '<img src="images/son.svg" alt="">';
+            } else {
+                audio.pause();
+                soundIcon.innerHTML = '<img src="images/mute.svg" alt="">';
+            }
+            isMuted = !isMuted;
+        });
+    });
+</script>
 
 </body>
 </html>
