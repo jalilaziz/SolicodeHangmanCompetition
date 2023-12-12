@@ -1,33 +1,66 @@
-/* 1 */
+/* Default styles for all screen sizes */
 body {
     font-family: 'Cabin Sketch', sans-serif;
     background-image: url("images/BACKGROUND.jpeg");
     background-size: cover;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
     width: 100vw;
     height: 100vh;
 }
 
-.play {
+.first-1 {
+    width: 100vw;
+    height: 15vh;
+}
+
+.first-1 img {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.first-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    width: 100vw;
+    height: 70vh;
+    text-align: center;
+}
+
+.first-2 h1 {
+    font-size: 10rem;
+}
+
+.first-2 img {
+    width: 12rem;
+    cursor: pointer;
+}
+
+.first-3 {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    font-size: 3rem;
+    width: 100vw;
+    height: 15vh;
 }
 
-.son {
-    padding: 10px 30px;
+.first-3 img {
+    margin-right: 2rem;
 }
 
+/* Responsive styles using media queries */
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .first-2 h1 {
+        font-size: 6rem;
+    }
 
-/* 2 */
-
-
-
-
-/* 3 */
-
-
-
-
-/* 4 */
+    .first-2 img {
+        width: 8rem;
+    }
+}
