@@ -64,3 +64,36 @@ section {
         width: 8rem;
     }
 }
+
+/* New styles for categories */
+.categories {
+    width: 100vw;
+    height: 60vh;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+
+.category {
+    position: relative;
+}
+
+.category img {
+    width: 400px; /* Set the width to 100% for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* Ensure relative positioning for absolute child */
+}
+
+.category h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%); /* Center text both vertically and horizontally */
+    font-size: 60px; /* Set the font size for the h2 */
+    color: black;/* Set the text color */
+}
+
+.categories h1 {
+    font-size: 7rem;
+    line-height: 70%;
+}
