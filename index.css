@@ -3,8 +3,7 @@ body {
     font-family: 'Cabin Sketch', sans-serif;
     background-image: url("images/BACKGROUND.jpeg");
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+ 
 }
 
 .play {
