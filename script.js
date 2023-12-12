@@ -13,36 +13,35 @@ fetch('hangman-game.json')
             // Generate a random index 'i' to select a question from the specified category
             let i = Math.floor(Math.random() * 7);
 
-            // let para = new URLSearchParams(window.location.search);
-            // let id = para.get("id");
-            // let questionData = json[id][i].question
-            // let answerData = json[id][i].answer.split('')
+          
+            let questionData = json[id][i].question
+            let answerData = json[id][i].answer.split('')
 
-            // let question = document.getElementById("id")
-            // question.innerHTML = questionData
+            let question = document.getElementById("id")
+            question.innerHTML = questionData
 
-            // let answer = document.getElementById("answer")
+            let answer = document.getElementById("answer")
 
-            // for(let i =0 ; i< answerData.length;i++){
-            //     let div = document.createElement("div")
-            //     div.classList.add("")
-            //     div.setAttribute("id",answer[i])
-            //     answer.appendChild(div)
-            // }
+         
+            for(let j = 0 ; j< answerData.length;j++){
+                let div = document.createElement("div")
+                div.classList.add("answer_place")
+                div.setAttribute("id",answerData[j])
+                answer.appendChild(div)
+            }
 
-            // Access the data for the selected category and question
-            let category_data = json[id][i];
+            let alphabet = "qwertyuiopasdfghjklzxcvbnm"
+            for (let k = 0; k < alphabet.length; k++){
+                let keybord = document.createElement("button");
+                keybord.id = alphabet[k];
+                keybord.innerHTML = alphabet[k];
+                keybord.onclick = function () {
+                    if (answerData.includes(keybord.id)) {
 
-            // Display the question on the HTML page
-            let question = document.getElementById("question");
-            question.innerHTML = category_data.question;
+                    }
+                }
+            }
 
-            // Get the answer for the selected question
-            let answer = category_data.answer;
-
-            // Split the answer string into an array of characters using ', ' as the delimiter
-            let answerArray = answer.split(', ');
-            
 
         }
 
