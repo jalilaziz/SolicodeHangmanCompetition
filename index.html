@@ -10,6 +10,7 @@
     <title>Hangman Game</title>
 </head>
 <body>
+    <main>
     <audio id="defaultSong" autoplay>
         <source src="audio/audiobk.mp3" type="audio/mp3">
         Your browser does not support the audio element.
@@ -21,10 +22,10 @@
         </div>
         <div class="play">
             <h1>LetterQuest</h1>
-            <img src="images/play.svg" alt="">
+            <img src="images/play.svg" alt="" onclick="startPage()">
         </div>
         <div class="categories" style="display: none;">
-            <div class="categorie">
+            <div class="categorie" >
                 <h1>Choose a category !</h1>
                 <a href="Hangman_Game.html?id=football"><button>Football</button></a>
                <a href="Hangman_Game.html?id=fitnes"> <button>Fitness</button></a>
@@ -36,25 +37,9 @@
             <img src="images/settings.svg" alt="">
         </div>
     </div>
+</main>
 </section>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var audio = document.getElementById('defaultSong');
-        var soundIcon = document.getElementById('sond');
-        var isMuted = false;
-
-        soundIcon.addEventListener('click', function() {
-            if (isMuted) {
-                audio.play();
-                soundIcon.innerHTML = '<img src="images/son.svg" alt="">';
-            } else {
-                audio.pause();
-                soundIcon.innerHTML = '<img src="images/mute.svg" alt="">';
-            }
-            isMuted = !isMuted;
-        });
-    });
-</script>
+<script src="index.js"></script>
 
 </body>
 </html>
