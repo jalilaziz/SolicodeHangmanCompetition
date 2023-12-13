@@ -2,17 +2,6 @@
 fetch('hangman-game.json')
     .then((response) => response.json()) // Parse the response as JSON
     .then(async (json) => {
-<<<<<<< HEAD
-        console.log(json)
-        // Extract 'id' parameter from the URL query string using URLSearchParams
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get('id');
-
-        // Generate a random index 'i' to select a question from the specified category
-        let i = Math.floor(Math.random() * 6);
-        console.log(json[id][i].question)
-=======
->>>>>>> d650ed47957405e5353c07b7f26b7e185a3d1d87
 
             // Extract 'id' parameter from the URL query string using URLSearchParams
             const params = new URLSearchParams(window.location.search);
@@ -29,7 +18,7 @@ fetch('hangman-game.json')
             let question = document.getElementById("question");
             question.innerHTML = questionData;
 
-            let answer = document.querySelector(".answers");
+            let answer = document.querySelector("#answers");
 
         // Create div elements for each character in the answerData
         for (let j = 0; j < answerData.length; j++) {
@@ -50,7 +39,6 @@ fetch('hangman-game.json')
         for (let k = 0; k < alphabet.length; k++) {
             let keyboard = document.createElement("button");
             keyboardDiv.appendChild(keyboard)
-            keyboard.classList = "letter"
             keyboard.id = alphabet[k];
             keyboard.innerHTML = alphabet[k];
 
@@ -63,12 +51,12 @@ fetch('hangman-game.json')
                         if (answerData[y].toLowerCase().includes(keyboard.id)) {
                             let div = document.getElementById(y)
                             div.innerHTML = answerData[y]
-                            keyboard.id.classList
+                            keyboard.setAttribute("id","correct")
                         }
 
                     }
                     if (!answerData.includes(keyboard.id.toLowerCase()) == true && !answerData.includes(keyboard.id.toUpperCase()) == true) {
-                        keyboard.id.className = "faulse"
+                        keyboard.className = "faulse"
                         x++;
                         console.log(x)
                     }
