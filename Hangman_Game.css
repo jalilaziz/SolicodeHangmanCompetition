@@ -66,13 +66,14 @@ section {
 
 .questions button {
     width: 2%;
-    height: 10%;
+    /* height: 10%; */
     font-family: 'Cabin Sketch', sans-serif;
     font-size: 2.5rem;
     margin: 10px;
     background: none;
-    border: solid 0px rgb(0, 0, 0);
+    border: solid 2px  rgb(0, 0, 0);
     font-weight: 900;
+    border-radius: 25px;
     cursor: pointer;
     min-width: 50px;
     transition: all 0.2s ease-in-out;
@@ -147,4 +148,26 @@ section {
     width: 100%;
 
 }
+#failed{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30%;
+    width: 50%;
+    z-index: 0;
+    /* overflow: auto; */
+    z-index: 1;
+    text-align: center;
+    padding-top: 4%;
+    background-color: rgba(255, 0, 0, 65%);
+    font-size: 50px;
+    color: white;
+    border-radius: 10px;
+}
+#failed img {
+    height: 70px;
+    margin-top: 10px;
+}
+
 

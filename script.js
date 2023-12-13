@@ -1,4 +1,5 @@
 function startAgain() {
+    document.getElementById("failed").style.display="none"
     // Fetch JSON data from 'hangman-game.json'
     fetch('hangman-game.json')
         .then((response) => response.json()) // Parse the response as JSON
@@ -31,12 +32,15 @@ function startAgain() {
             }
 
             // Define the alphabet for keyboard buttons
-            let alphabet = "qwertyuiopasdfghjklzxcvbnm";
+            let alphabet = "AZERTYUIOPQSDFGHJKLMWXCVBN";
 
             // For validating if you lose or win 
             let x = 0;
             let keyboardDiv = document.getElementById("button");
             keyboardDiv.innerHTML = "";
+
+            let messajFail = document.getElementById("failed")
+            messajFail.innerHTML = ""
 
             // Create keyboard buttons dynamically
             for (let k = 0; k < alphabet.length; k++) {
@@ -50,7 +54,7 @@ function startAgain() {
                     if (x <= 5) {
                         for (let y = 0; y < answerData.length; y++) {
                             // Check if the clicked letter is in the answer
-                            if (answerData[y].toLowerCase().includes(keyboard.id)) {
+                            if (answerData[y].toUpperCase().includes(keyboard.id)) {
                                 let div = document.getElementById(y)
                                 div.innerHTML = answerData[y];
                                 keyboard.style.backgroundColor = "#0A7308"; // Set background color to green for correct guesses
@@ -59,15 +63,33 @@ function startAgain() {
                         }
                         // Check if the clicked letter is not in the answer
                         if (!answerData.includes(keyboard.id.toLowerCase()) && !answerData.includes(keyboard.id.toUpperCase())) {
+                            if(keyboard.style.backgroundColor != "red"){
+                            keyboard.style.backgroundColor = "red"; // Set background color to green for correct guesses
+                            keyboard.style.color = "white";
                             x++;
-                            keyboard.style.backgroundColor = "red"; // Set background color to red for incorrect guesses
-                            keyboard.style.color = "white"
+
+                        }
+                            console.log(x)
                         }
                     } else {
-                        console.log("You won!")
+
+                        messajFail.innerHTML="You lose try again </br>"
+
+                        let imageFail = document.createElement("img")
+                        imageFail.setAttribute("src","")
+                        messajFail.appendChild(imageFail)
+
+                         let retry = document.createElement("img")
+                         retry.setAttribute("src","images/repeat-solid.svg")
+                         retry.setAttribute("onclick","startAgain()")
+                         messajFail.appendChild(retry)
+
+                         document.getElementById("failed").style.display="block"
+
                     }
-                };
+
             }
+        }
         });
 }
 startAgain();
