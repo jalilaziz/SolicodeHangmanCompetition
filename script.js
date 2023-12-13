@@ -3,23 +3,22 @@ fetch('hangman-game.json')
     .then((response) => response.json()) // Parse the response as JSON
     .then(async (json) => {
 
-        // Extract 'id' parameter from the URL query string using URLSearchParams
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get('id');
+            // Extract 'id' parameter from the URL query string using URLSearchParams
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
 
-        // Generate a random index 'i' to select a question from the specified category
-        let i = Math.floor(Math.random() * 6);
-        
+            // Generate a random index 'i' to select a question from the specified category
+            let i = Math.floor(Math.random() * 6);
 
-        // Retrieve question and answer data for the selected category and question
-        let questionData = json[id][i].question;
-        let answerData = json[id][i].answer.replaceAll(" ", "").split('');
+            // Retrieve question and answer data for the selected category and question
+            let questionData = json[id][i].question;
+            let answerData = json[id][i].answer.replaceAll(" ","").split('');
 
-        // Find the HTML elements to update with the question and answer data
-        let question = document.getElementById("question");
-        question.innerHTML = questionData;
+            // Find the HTML elements to update with the question and answer data
+            let question = document.getElementById("question");
+            question.innerHTML = questionData;
 
-        let answer = document.querySelector(".answers");
+            let answer = document.querySelector(".answers");
 
         // Create div elements for each character in the answerData
         for (let j = 0; j < answerData.length; j++) {
