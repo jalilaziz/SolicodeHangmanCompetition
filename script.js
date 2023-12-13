@@ -6,7 +6,7 @@ fetch('hangman-game.json')
         // Extract 'id' parameter from the URL query string using URLSearchParams
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');
-        
+
         // Generate a random index 'i' to select a question from the specified category
         let i = Math.floor(Math.random() * 6);
         console.log(json[id][i].question)
@@ -52,12 +52,12 @@ fetch('hangman-game.json')
                         if (answerData[y].toLowerCase().includes(keyboard.id)) {
                             let div = document.getElementById(y)
                             div.innerHTML = answerData[y]
-                            keyboard.className = "correct"
+                            keyboard.id.classList
                         }
 
                     }
                     if (!answerData.includes(keyboard.id.toLowerCase()) == true && !answerData.includes(keyboard.id.toUpperCase()) == true) {
-                        keyboard.className = "faulse"
+                        keyboard.id.className = "faulse"
                         x++;
                         console.log(x)
                     }
