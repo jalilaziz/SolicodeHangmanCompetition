@@ -2,6 +2,7 @@
 fetch('hangman-game.json')
     .then((response) => response.json()) // Parse the response as JSON
     .then(async (json) => {
+<<<<<<< HEAD
         console.log(json)
         // Extract 'id' parameter from the URL query string using URLSearchParams
         const params = new URLSearchParams(window.location.search);
@@ -10,15 +11,25 @@ fetch('hangman-game.json')
         // Generate a random index 'i' to select a question from the specified category
         let i = Math.floor(Math.random() * 6);
         console.log(json[id][i].question)
+=======
+>>>>>>> d650ed47957405e5353c07b7f26b7e185a3d1d87
 
-        // Retrieve question and answer data for the selected category and question
-        let questionData = json[id][i].question;
-        let answerData = json[id][i].answer.replaceAll(" ", "").split('');
-        
-        // Find the HTML elements to update with the question and answer data
-        let question = document.getElementById("question");
-        question.innerHTML = questionData;
-        let answer = document.querySelector("#answers");
+            // Extract 'id' parameter from the URL query string using URLSearchParams
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+
+            // Generate a random index 'i' to select a question from the specified category
+            let i = Math.floor(Math.random() * 6);
+
+            // Retrieve question and answer data for the selected category and question
+            let questionData = json[id][i].question;
+            let answerData = json[id][i].answer.replaceAll(" ","").split('');
+
+            // Find the HTML elements to update with the question and answer data
+            let question = document.getElementById("question");
+            question.innerHTML = questionData;
+
+            let answer = document.querySelector(".answers");
 
         // Create div elements for each character in the answerData
         for (let j = 0; j < answerData.length; j++) {
