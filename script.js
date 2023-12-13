@@ -3,22 +3,22 @@ fetch('hangman-game.json')
     .then((response) => response.json()) // Parse the response as JSON
     .then(async (json) => {
 
-        // Extract 'id' parameter from the URL query string using URLSearchParams
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get('id');
+            // Extract 'id' parameter from the URL query string using URLSearchParams
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
 
-        // Generate a random index 'i' to select a question from the specified category
-        let i = Math.floor(Math.random() * 6);
+            // Generate a random index 'i' to select a question from the specified category
+            let i = Math.floor(Math.random() * 6);
 
-        // Retrieve question and answer data for the selected category and question
-        let questionData = json[id][i].question;
-        let answerData = json[id][i].answer.replaceAll(" ", "").split('');
+            // Retrieve question and answer data for the selected category and question
+            let questionData = json[id][i].question;
+            let answerData = json[id][i].answer.replaceAll(" ","").split('');
 
-        // Find the HTML elements to update with the question and answer data
-        let question = document.getElementById("question");
-        question.innerHTML = questionData;
+            // Find the HTML elements to update with the question and answer data
+            let question = document.getElementById("question");
+            question.innerHTML = questionData;
 
-        let answer = document.querySelector("#answers");
+            let answer = document.querySelector(".answers");
 
         // Create div elements for each character in the answerData
         for (let j = 0; j < answerData.length; j++) {
@@ -31,14 +31,15 @@ fetch('hangman-game.json')
         // Define the alphabet for keyboard buttons
         let alphabet = "qwertyuiopasdfghjklzxcvbnm";
 
-        // For validating if you lose or win 
+        //for validing if u lose or won 
         let x = 0;
         let keyboardDiv = document.getElementById("button")
 
         // Create keyboard buttons dynamically
         for (let k = 0; k < alphabet.length; k++) {
             let keyboard = document.createElement("button");
-            keyboardDiv.appendChild(keyboard);
+            keyboardDiv.appendChild(keyboard)
+            keyboard.classList = "letter"
             keyboard.id = alphabet[k];
             keyboard.innerHTML = alphabet[k];
 
@@ -46,22 +47,26 @@ fetch('hangman-game.json')
             keyboard.onclick = function () {
                 if (x <= 5) {
                     for (let y = 0; y < answerData.length; y++) {
-                        // Check if the clicked letter is in the answer
+                        console.log(keyboard.id)
+                        console.log(answerData[y])
                         if (answerData[y].toLowerCase().includes(keyboard.id)) {
                             let div = document.getElementById(y)
                             div.innerHTML = answerData[y]
-                            keyboard.style.backgroundColor = "#0A7308"; // Set background color to green for correct guesses
+                            keyboard.className = "correct"
                         }
+
                     }
-                    // Check if the clicked letter is not in the answer
-                    if (!answerData.includes(keyboard.id.toLowerCase()) && !answerData.includes(keyboard.id.toUpperCase())) {
+                    if (!answerData.includes(keyboard.id.toLowerCase()) == true && !answerData.includes(keyboard.id.toUpperCase()) == true) {
+                        keyboard.className = "faulse"
                         x++;
                         console.log(x)
-                        keyboard.style.backgroundColor = "red"; // Set background color to red for incorrect guesses
                     }
                 } else {
-                    console.log("You won!")
+                    console.log("u won")
                 }
+
             };
+
         }
+
     })
