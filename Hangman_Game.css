@@ -49,6 +49,10 @@ section {
     height: 70%;
 }
 
+.questions {
+    height: 85%;
+}
+
 #question{
     font-size: 34px;
     text-align: center;
@@ -79,15 +83,6 @@ section {
     margin-top: 5%;
     width: 50%;
     /* border: 2px solid black; */
-    background-image: url(images/mini_square.svg);
-    background-repeat: no-repeat;
-    background-position: 4px 7px;
-}
-
-.letter {
-    background-image: url(images/mini_square.svg);
-    background-repeat: no-repeat;
-    background-position: 4px 7px;
 }
 
 

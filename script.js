@@ -18,7 +18,7 @@ fetch('hangman-game.json')
             let question = document.getElementById("question");
             question.innerHTML = questionData;
 
-            let answer = document.querySelector(".answers");
+            let answer = document.querySelector("#answers");
 
         // Create div elements for each character in the answerData
         for (let j = 0; j < answerData.length; j++) {
