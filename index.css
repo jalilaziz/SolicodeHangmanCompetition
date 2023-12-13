@@ -39,7 +39,9 @@ section{
 .play img {
     max-width: 10%;
     cursor: pointer;
+
 }
+
 
 .play h1 {
     font-size: 10rem;

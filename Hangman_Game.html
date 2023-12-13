@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Hangman_Game.css"/>
-    <title>Hangman Game</title>
+    <title>LETTER QUEST</title>
 </head>
 <body>
     <audio id="defaultSong" autoplay>
@@ -23,13 +23,25 @@
             <div id="question"></div>
         
             <div id="answers"></div>
-
-            <div id="button"> 
+            <div class="letters">
+                <div id="button"> 
+                </div>
+                <div class="showimage">
+                    <img src="images/win.gif" alt="win" width="100%" height="100%">
+                </div>
             </div>
         </div>
-        <div class="settings">
+        <div id="last">
+        <div id="tentative">
+            <h2>Tentative :</h2>
+            <h2 id="numberTent"></h2>
+            <h2>/</h2>
+            <h2>5</h2>
+        </div>
+        <div class="refresh">
             <img src="images/repeat-solid.svg" alt="repeat" onclick="startAgain()">
         </div>
+    </div>
     </section>
     <script src="script.js"></script>
     <script src="index.js"></script>
