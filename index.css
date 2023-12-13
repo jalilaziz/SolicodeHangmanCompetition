@@ -47,8 +47,8 @@ section{
     width: 100%;
     height: 15%;
     display: flex;
-    align-items: end;
-    justify-content: end;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .settings img {
@@ -92,6 +92,9 @@ section{
     color: white;
 }
 
+#audio-player {
+    display: none;
+}
 
 @media (max-width: 768px) {
     .play h1 {
@@ -105,9 +108,6 @@ section{
 
     .categorie button {
         width: 40%;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
-}
-#audio-player {
-    display: none;
 }
