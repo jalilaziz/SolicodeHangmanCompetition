@@ -10,45 +10,51 @@
     <title>Hangman Game</title>
 </head>
 <body>
-<!-- 1 -->
-<section>
-    <div class="full">
-        <div class="first-1">
+    <audio id="defaultSong" autoplay>
+        <source src="audio/audiobk.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+ <section>
+    <div class="start">
+        <div class="son" id="sond">
             <img src="images/son.svg" alt="">
         </div>
-        <div class="first" style="display: none;">
-            <div class="first-2">
-                <div>
-                    <h1>LetterQuest</h1>
-                </div>
-                <div>
-                    <img id="playButton" src="images/play.svg" alt="">
-                </div>
+        <div class="play" style="display: none;">
+            <h1>LetterQuest</h1>
+            <img src="images/play.svg" alt="">
+        </div>
+        <div class="categories">
+            <div class="categorie">
+                <h1>Choose a <br>category !</h1>
+                <a href="Hangman_Game.html?id=football"><button>Football</button></a>
+               <a href="Hangman_Game.html?id=fitnes"> <button>fitnes</button></a>
+               <a href="Hangman_Game.html?id=basketball"></a> <button>basketball</button>
             </div>
         </div>
-        <div class="second">
-            <!-- 2 -->
-            <div class="categories">
-                <h1>Choose a <br> category !</h1>
-                <div class="category">
-                    <a href="">
-                        <img src="images/square.svg" alt="">
-                    <h2>Football</h2>
-                    </a>
-                </div>
-                <div class="category">
-                    <a href="">
-                        <img src="images/square.svg" alt="">
-                    <h2>Football</h2>
-                    </a>
-                </div>
-            </div>
-            <!-- 2 -->
-        </div>
-        <div class="first-3">
+    </div>
+        <div class="settings">
             <img src="images/settings.svg" alt="">
         </div>
     </div>
-    <script src="script.js"></script>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('defaultSong');
+        var soundIcon = document.getElementById('sond');
+        var isMuted = false;
+
+        soundIcon.addEventListener('click', function() {
+            if (isMuted) {
+                audio.play();
+                soundIcon.innerHTML = '<img src="images/son.svg" alt="">';
+            } else {
+                audio.pause();
+                soundIcon.innerHTML = '<img src="images/mute.svg" alt="">';
+            }
+            isMuted = !isMuted;
+        });
+    });
+</script>
+
 </body>
 </html>

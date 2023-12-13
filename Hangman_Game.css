@@ -1,18 +1,109 @@
-/* 1 */
+
 body {
     font-family: 'Cabin Sketch', sans-serif;
+    background-image: url("images/BACKGROUND.jpeg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
 }
 
+section {
+    width: 100%;
+    height: 100%;
+}
 
+.sound {
+    width: 100%;
+    height: 15%;
+}
 
-/* 2 */
+.sound img {
+    margin-left: 2%;
+    margin-top: 1%;
+    cursor: pointer;
+}
 
+.settings {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
 
+.settings img {
+    margin-right: 2%;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
 
+.question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+}
 
-/* 3 */
+.questions h3 {
+    font-size: 3rem;
+    line-height: 5rem;
+    margin-top: 0;
+    margin-bottom: 4%;
+}
 
+.questions button {
+    width: 2%;
+    height: 10%;
+    font-family: 'Cabin Sketch', sans-serif;
+    font-size: 2.5rem;
+    margin: 10px;
+    background: none;
+    border: solid 0px rgb(0, 0, 0);
+    font-weight: 900;
+    cursor: pointer;
+    min-width: 50px;
+    transition: all 0.2s ease-in-out;
+}
 
+.questions button:hover {
+    background-color: #0A7308;
+    color: white;
+    border-radius: 10px;
+}
 
+#button {
+    margin-left: 2%;
+    margin-top: 5%;
+    width: 50%;
+    /* border: 2px solid black; */
+    background-image: url(images/mini_square.svg);
+    background-repeat: no-repeat;
+    background-position: 4px 7px;
+}
 
-/* 4 */
+.letter {
+    background-image: url(images/mini_square.svg);
+    background-repeat: no-repeat;
+    background-position: 4px 7px;
+}
+
+@media (max-width: 768px) {
+    .play h1 {
+        font-size: 6rem;
+    }
+
+    .question h1 {
+        font-size: 5rem;
+        line-height: 4rem;
+    }
+
+    .question button {
+        width: 40%;
+        font-size: 2rem;
+    }
+}
