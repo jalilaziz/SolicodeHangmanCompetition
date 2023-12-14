@@ -23,6 +23,10 @@
         {
             "question": "Which national team is known as the 'Super Eagles'?",
             "answer": "Nigeria"
+        },
+        {
+            "question": "Which football club has won the most UEFA Champions League titles?",
+            "answer": "Madrid"
         }
     ],
     "basketball": [
@@ -33,6 +37,10 @@
         {
             "question": "Who holds the record for the most points scored in a single NBA game?",
             "answer": "Wilt Chamberlain"
+        },
+        {
+            "question": "Who is often referred to as 'The Mailman' in the NBA?",
+            "answer": "Karl Malone"
         },
         {
             "question": "In basketball, what is the term for a field goal made while being fouled, with a free throw awarded?",
@@ -49,6 +57,14 @@
         {
             "question": "Who holds the record for the most points scored in a single NBA game?",
             "answer": "Wilt Chamberlain"
+        },
+        {
+            "question": "In basketball, what is a common exercise to improve vertical jump and leg strength?",
+            "answer": "Jump Squats"
+        },
+        {
+            "question": "Who is known as 'The King' in the NBA?",
+            "answer": "LeBron James"
         }
     ],
     "fitnes": [
@@ -57,16 +73,12 @@
             "answer": "Bench Press"
         },
         {
-            "question": "What is the recommended daily water intake for an average adult?",
-            "answer": "2 liters"
-        },
-        {
             "question": "Which type of exercise is known for improving flexibility and balance?",
             "answer": "Yoga"
         },
         {
             "question": "What is the purpose of a 'plank' exercise in a workout routine?",
-            "answer": "Core Strengthening"
+            "answer": "Strengthening"
         },
         {
             "question": "In weightlifting, what does 'RM' stand for?",
@@ -75,6 +87,19 @@
         {
             "question": "Which cardiovascular exercise is often recommended for improving heart health?",
             "answer": "Running"
+        },
+        {
+            "question": "What is the primary muscle group targeted during a 'deadlift'?",
+            "answer": "Lower Back"
+        },
+        {
+            "question": "For overall strength development, which compound exercise involves lifting a barbell from the ground to overhead in one motion?",
+            "answer": "Clean  Jerk"
         }
-    ]
+    ],
+    "images": {
+        "football": "images/win.gif",
+        "basketball": "images/basketball2.gif",
+        "fitnes": "images/fitness1.gif"
+    }
 }

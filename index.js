@@ -1,3 +1,4 @@
+// ------------------------sound--------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
     var audio = document.getElementById('defaultSong');
     var soundIcon = document.getElementById('sond');
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isMuted = !isMuted;
     });
 });
-
+//------------------------------ next to categoury -----------------
 function startPage(){
     let startButton = document.querySelector(".play")
     startButton.style.display="none"
